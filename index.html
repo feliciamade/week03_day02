@@ -73,6 +73,12 @@
     body.style.alignItems = "center";
 
 
+
+    var shirts = document.getElementById("shirtsItems");
+    shirts.style.display = "flex";
+    shirts.style.flexDirection = "row";
+    shirts.style.gap = "100px";
+    
     var shirt1 = document.getElementById("itemShirt1");
     shirt1.style.display = "inline-block";
 
@@ -84,14 +90,19 @@
 
     //finish the rest of PART 1 here..
 
-    var shirt1 = document.getElementById("itemPants1");
-    shirt1.style.display = "inline-block";
+    var pants = document.getElementById("pantsItems");
+    pants.style.display = "flex";
+    pants.style.flexDirection = "row";
+    pants.style.gap = "100px";
 
-    var shirt2 = document.getElementById("itemPants2");
-    shirt2.style.display = "inline-block";
+    var pant1 = document.getElementById("itemPants1");
+    pant1.style.display = "inline-block";
 
-    var shirt3 = document.getElementById("itemPants3");
-    shirt3.style.display = "inline-block";
+    var pant2 = document.getElementById("itemPants2");
+    pant2.style.display = "inline-block";
+
+    var pant3 = document.getElementById("itemPants3");
+    pant3.style.display = "inline-block";
 
     // <---------------- PART 2 ------------>
     // Space-out and center the clothing items
@@ -99,7 +110,7 @@
     
     document.querySelectorAll('#shoesItems, #shoesItems *').forEach(element => 
     { shoesItems.style.display = "flex";
-      shoesItems.style.gap = "5px";
+      shoesItems.style.gap = "100px";
     });
 
     // <---------------- PART 3 ------------>
@@ -118,6 +129,10 @@
 
     document.querySelectorAll('#body, #body *').forEach(element => 
     { element.style.borderRadius = "10px";}); 
+
+    document.querySelectorAll('img').forEach(element => {
+    element.style.margin = "15px";
+    });
 
 
 </script>
