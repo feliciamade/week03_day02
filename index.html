@@ -5,7 +5,7 @@
     <title>Shopping Cart</title>
 </head>
 
-<body>
+<body id="body">
     <div id="shirtsSection">
         <h1 id="shirtsHeader">Shirts</h1>
         <div id="shirtsItems">
@@ -67,6 +67,11 @@
     // <---------------- PART 1 ------------>
     // Align the clothing items horizontally
     
+    var body = document.getElementById("body");
+    body.style.display = "flex";
+    body.style.flexDirection = "column";
+    body.style.alignItems = "center";
+
 
     var shirt1 = document.getElementById("itemShirt1");
     shirt1.style.display = "inline-block";
@@ -79,24 +84,40 @@
 
     //finish the rest of PART 1 here..
 
+    var shirt1 = document.getElementById("itemPants1");
+    shirt1.style.display = "inline-block";
 
+    var shirt2 = document.getElementById("itemPants2");
+    shirt2.style.display = "inline-block";
+
+    var shirt3 = document.getElementById("itemPants3");
+    shirt3.style.display = "inline-block";
 
     // <---------------- PART 2 ------------>
     // Space-out and center the clothing items
 
-
-
-
+    
+    document.querySelectorAll('#shoesItems, #shoesItems *').forEach(element => 
+    { shoesItems.style.display = "flex";
+      shoesItems.style.gap = "5px";
+    });
 
     // <---------------- PART 3 ------------>
     // Center the item descriptions and category headers
 
+     /* OMG this would not work at all and idk why.
+    but I just read something about forEACH and looping which seems better
+    const header = document.querySelector('h1');
+    header.style.textAlign = "center"; */
 
-
-
+    document.querySelectorAll('h1').forEach(h1 => h1.style.textAlign = "center");
+    document.querySelectorAll('h3').forEach(h3 => h3.style.textAlign = "center");
 
     // <---------------- PART 4 ------------>
     // Add padding to the item containers, Round the borders of item containers
+
+    document.querySelectorAll('#body, #body *').forEach(element => 
+    { element.style.borderRadius = "10px";}); 
 
 
 </script>
